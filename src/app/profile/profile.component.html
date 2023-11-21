@@ -1,0 +1,30 @@
+<div class="bx-profile">
+<section>
+    <img src="assets/img8.jpg" alt="Profile Picture">
+    <h1>{{fname}} {{lname}}</h1>
+    <p>{{designation}}</p>
+
+    <div class="details">
+        <h2 [innerText]="title"></h2>
+        <p [class]="myClass">{{email}}</p>
+        <p [class]="myClass">{{phone}}</p>
+    </div>
+
+    <div class="details">
+        <h2 [innerText]="title1"></h2>
+        <p [class]="myClass">Location: {{location}}</p>
+        <p [class]="myClass">Joining date : {{date_of_joining}}</p>
+    </div>
+    <div class="details">
+        <h2 [innerText]="title2"></h2>
+        <p [class]="myClass">{{degree}}</p>
+        <p [class]="myClass">{{college}}</p>
+    </div>
+    <button (click)="onSave()">EDIT PROFILE</button>
+    <p>Profile Updated {{clickCount}}</p>
+    <input #myTitle (keyup)="keyup(myTitle.value)">
+    <p>{{text}}</p>
+    <input type="text" name="value" [(ngModel)]="value">
+    <p>{{value}}</p>
+</section>
+</div>
